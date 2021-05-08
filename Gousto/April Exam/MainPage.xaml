@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="April_Exam.MainPage" Title="Fibonacci Numbers">
+
+    <StackLayout>
+        <Entry Placeholder="from index" VerticalTextAlignment="Start" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" x:Name="Index1" TextChanged="Index1_TextChanged" />
+        <Entry Placeholder="to index " VerticalOptions="Start" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" x:Name="Index2" TextChanged="Index2_TextChanged" />
+        <Button Text="Display" BackgroundColor=" Color.LightSeaGreen" Margin="10" x:Name="Button1" Clicked="Button_Clicked" />
+        <ListView x:Name="ListView1" IsVisible="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <SwitchCell x:Name="Svalue" Text="{Binding Text}" On="True" OnChanged="Svalue_OnChanged"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="TOTAL" BackgroundColor="#456BD2" Clicked="Button1_Clicked" IsVisible="False" x:Name="TheTotal" Margin="10"/>
+        <Label Text ="{Binding Text}" x:Name="Total" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"  />
+    </StackLayout>
+</ContentPage>
